@@ -8,7 +8,7 @@ from game_logic import SimpleAI, winner, MOVES
 
 # Configuración de captura de video
 # Se prioriza CAP_DSHOW en Windows para minimizar el buffer de entrada.
-IDX = 0 
+IDX = 0
 cap = cv2.VideoCapture(IDX, cv2.CAP_DSHOW)
 if not cap.isOpened():
     raise RuntimeError("Error crítico: No se pudo inicializar la cámara.")
@@ -156,7 +156,7 @@ try:
 
                 # Turno de la IA
                 cpu_move = ia.choose()
-                ia.observe(player_move) 
+                ia.observe(player_move)
 
                 # Determinación del ganador
                 res = winner(player_move, cpu_move)
